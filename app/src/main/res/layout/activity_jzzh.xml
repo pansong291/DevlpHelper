@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:paddingTop="35dp">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal">
+
+		<CheckBox
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="以n个单位拆分字符"
+			android:checked="true"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:id="@+id/jzzhChB"
+			android:layout_weight="1"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:hint="n"
+			android:id="@+id/edn"
+			android:inputType="number"
+			android:ems="3"
+			android:text="2"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal">
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:hint="输入"
+			android:digits="0123456789abcdefABCDEF"
+			android:layout_weight="1"
+			android:id="@+id/edin"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:hint="进制"
+			android:maxLength="2"
+			android:id="@+id/frjz"
+			android:inputType="number"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="to"
+			android:layout_width="wrap_content"
+			android:layout_gravity="center_vertical"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:hint="进制"
+			android:maxLength="2"
+			android:id="@+id/tojz"
+			android:inputType="number"/>
+
+	</LinearLayout>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:hint="输出"
+		android:id="@+id/edout"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="转换"
+		android:layout_width="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:onClick="onjzzhc"/>
+
+</LinearLayout>
+

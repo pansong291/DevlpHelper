@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:gravity="center"
+	android:padding="10dp">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_marginBottom="10dp">
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/edday"
+			android:ems="2"
+			android:gravity="right"
+			android:inputType="numberSigned"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="天"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/edhour"
+			android:ems="2"
+			android:maxLength="2"
+			android:gravity="right"
+			android:inputType="numberSigned"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="时"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:id="@+id/edminu"
+			android:ems="2"
+			android:maxLength="2"
+			android:gravity="right"
+			android:inputType="numberSigned"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="分"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="关于时间的说明：\n1.若分位为0，则时间为永久；\n2.若分位为空，其它位为0或为空，则时间为0；\n3.其它情况按所填时间计算。"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="wrap_content"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

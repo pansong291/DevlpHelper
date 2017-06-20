@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="horizontal"
+	android:gravity="center">
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:singleLine="true"
+		android:focusable="false"
+	    android:imeOptions="actionSearch"
+		android:id="@+id/webeditt"
+		android:layout_weight="1"
+		android:textSize="16sp"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#DDDDDD"/>
+
+	<ImageButton
+		android:layout_height="wrap_content"
+		android:layout_width="50dp"
+		style="?android:attr/buttonBarButtonStyle"
+		android:id="@+id/websearch"
+		android:src="@android:drawable/ic_menu_search"
+		android:visibility="gone"/>
+
+</LinearLayout>
+

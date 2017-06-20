@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pansong291.devlphelper" >
+
+    <application
+        android:allowBackup="true"
+        android:name=".MyApplication"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="选择应用"
+            android:name=".test.AppListActivity"/>
+        <activity
+            android:label="输入数据"
+            android:name=".test.InputDataActivity"/>
+        <activity
+            android:name=".test.WebViewActivity"/>
+        <activity
+            android:label="加解密"
+            android:name=".jiajiemi.JiajMiActivity"/>
+        <activity
+            android:label="图码转换"
+            android:name=".tbtpdmzh.TBtmzhActivity"/>
+        <activity
+            android:label="进制转换"
+            android:name=".jzzh.JzzhActivity"/>
+        <activity
+            android:name=".CrashActivity"/>
+    </application>
+
+<uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

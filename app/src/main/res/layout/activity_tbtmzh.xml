@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center_horizontal"
+		android:orientation="vertical">
+
+		<RelativeLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content">
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:id="@+id/edt1"
+				android:layout_width="match_parent"
+				android:hint="输入图片链接"
+				android:maxHeight="150dp"/>
+
+			<ImageButton
+				android:id="@+id/close_m1"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_alignRight="@id/edt1"
+				android:background="@drawable/close_btn"
+				android:layout_centerVertical="true"
+				android:onClick="onClose1Click"
+				android:visibility="gone"/>
+
+		</RelativeLayout>
+
+		<CheckBox
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:id="@+id/tmzhCheckBox1"
+			android:text="保留文字"/>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal">
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:id="@+id/edt2"
+				android:hint="宽"
+				android:layout_weight="1.0"/>
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:id="@+id/edt3"
+				android:hint="高"
+				android:layout_weight="1.0"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:text="转换"
+				android:clickable="false"
+				android:layout_width="wrap_content"
+				android:id="@+id/btn1"
+				android:onClick="onZHClick"
+				android:layout_weight="1.0"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:text="复制"
+				android:clickable="false"
+				android:layout_width="wrap_content"
+				android:id="@+id/btn2"
+				android:onClick="onFZClick"
+				android:layout_weight="1.0"/>
+
+		</LinearLayout>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:visibility="gone"
+			android:id="@+id/edt4"
+			android:gravity="top"
+			android:maxHeight="150dp"/>
+
+	</LinearLayout>
+
+</ScrollView>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center_horizontal">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal">
+
+		<CheckBox
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:checked="true"
+			android:id="@+id/alCheckB"
+			android:text="过滤系统应用"
+			android:layout_gravity="center_vertical"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="togxygg"
+			android:text="更新与公告"
+			android:layout_weight="1.0"/>
+
+	</LinearLayout>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="浏览器"
+		android:layout_width="match_parent"
+		android:onClick="tollq"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="DES字符加解密"
+		android:onClick="tozfjjm"
+		android:layout_width="match_parent"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="贴吧图码转换"
+		android:layout_width="match_parent"
+		android:onClick="totmzh"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="进制转换"
+		android:layout_width="match_parent"
+		android:onClick="tojzzh"/>
+
+</LinearLayout>
+

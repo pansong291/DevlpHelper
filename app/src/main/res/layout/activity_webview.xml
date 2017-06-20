@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+
+		<ProgressBar
+			android:layout_height="wrap_content"
+			style="?android:attr/progressBarStyleHorizontal"
+			android:layout_width="match_parent"
+			android:id="@+id/webviewProgressBar"/>
+
+		<WebView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:id="@+id/mWebView"/>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal">
+
+			<Button
+				android:layout_height="wrap_content"
+				android:text="退出"
+				android:layout_width="wrap_content"
+				android:layout_weight="1.0"
+				android:onClick="tuiChu"
+				android:textSize="17sp"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:text="后退"
+				android:id="@+id/onbackButton"
+				android:layout_width="wrap_content"
+				android:layout_weight="1.0"
+				android:onClick="houTui"
+				android:textSize="17sp"
+				android:clickable="false"
+				android:textColor="#A0A0A0"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:text="前进"
+				android:id="@+id/ongoButton"
+				android:layout_width="wrap_content"
+				android:layout_weight="1.0"
+				android:onClick="qianJin"
+				android:textSize="17sp"
+				android:clickable="false"
+				android:textColor="#A0A0A0"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:text="刷新"
+				android:id="@+id/webviewButton"
+				android:layout_width="wrap_content"
+				android:layout_weight="1.0"
+				android:onClick="shuaXin"
+				android:textSize="17sp"/>
+
+			<Button
+				android:layout_height="wrap_content"
+				android:text="网易"
+				android:layout_width="wrap_content"
+				android:layout_weight="1.0"
+				android:textSize="17sp"
+				android:onClick="wangyi"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/webmb"
+		android:layout_height="match_parent"
+		android:onClick="onMb"
+		android:layout_width="match_parent"
+		android:visibility="gone"/>
+
+</RelativeLayout>
+
