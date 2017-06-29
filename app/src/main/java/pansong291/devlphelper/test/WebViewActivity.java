@@ -1,4 +1,5 @@
 package pansong291.devlphelper.test;
+
 import android.app.ActionBar;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -64,8 +65,8 @@ public class WebViewActivity extends Zactivity
    public boolean onKey(View p1,int p2,KeyEvent p3)
    { //软键盘的回车事件
     if(p2==KeyEvent.KEYCODE_ENTER
-	 &&p3.getAction()==KeyEvent.ACTION_UP)
-	 onSearchBP();
+	    &&p3.getAction()==KeyEvent.ACTION_UP)
+	    onSearchBP();
     return false;
    }
   });
@@ -104,10 +105,10 @@ public class WebViewActivity extends Zactivity
   mWebView.setWebChromeClient(new WebChromeClient()
   {
     @Override //设置进度
-	public void onProgressChanged(WebView view,int progress)
-	{
-	 mpb.setProgress(progress);
-	}
+	  public void onProgressChanged(WebView view,int progress)
+	  {
+	   mpb.setProgress(progress);
+	  }
     @Override //设置标题
     public void onReceivedTitle(WebView view,String title)
     {
@@ -131,23 +132,23 @@ public class WebViewActivity extends Zactivity
   {
     //ActionBar上的输入框的响应事件
     if(p1.getId()==R.id.webeditt&&djcs==0)
-	{
-	 goUrlText.setFocusable(true);
-	 goUrlText.requestFocus();
-	 goUrlText.setFocusableInTouchMode(true);
-	 goUrlText.requestFocusFromTouch();
-	 
-	 goSearch.setVisibility(0);
-	 webMb.setVisibility(0);
-	 goUrlText.setHint("");
-	 goUrlText.setText(loadURL);
-	 goUrlText.selectAll();
-	 showIME(true);
-	 djcs++;
-	}else if(p1.getId()==R.id.websearch)
-	{
-	 onSearchBP();
-	}
+	  {
+	   goUrlText.setFocusable(true);
+	   goUrlText.requestFocus();
+	   goUrlText.setFocusableInTouchMode(true);
+	   goUrlText.requestFocusFromTouch();
+	   
+	   goSearch.setVisibility(0);
+	   webMb.setVisibility(0);
+     goUrlText.setHint("");
+	   goUrlText.setText(loadURL);
+ 	   goUrlText.selectAll();
+	   showIME(true);
+	   djcs++;
+	  }else if(p1.getId()==R.id.websearch)
+	  {
+	   onSearchBP();
+	  }
   }
  }
  //ActionBar上的搜索按钮响应事件

@@ -21,7 +21,7 @@ public class JiajMiActivity extends Zactivity
   edt2=(EditText)findViewById(R.id.miwed);
   edt3=(EditText)findViewById(R.id.mwedt);
   zy=new ZhuanYi();
-  my=msharedp.getString("mykey","");
+  my=msharedp.getString(SP_MY_KEY,"");
   edt1.setText(my);
  }
  
@@ -32,7 +32,7 @@ public class JiajMiActivity extends Zactivity
    toast("请输入密钥");
    return;
   }
-  if(msharedp.edit().putString("mykey",my).commit())
+  if(msharedp.edit().putString(SP_MY_KEY,my).commit())
   toast("密钥已保存");
  }
  

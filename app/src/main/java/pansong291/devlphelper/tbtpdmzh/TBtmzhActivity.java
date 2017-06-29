@@ -16,7 +16,6 @@ public class TBtmzhActivity extends Zactivity
  Button btn1,btn2;
  CheckBox mcb;
  ImageButton colse;
- public static final String WW="WW",HH="HH",BL="BL";
     /** Called when the activity is first created. */
     @Override
   public void onCreate(Bundle savedInstanceState)
@@ -35,9 +34,9 @@ public class TBtmzhActivity extends Zactivity
 	 
 	 edt1.addTextChangedListener(new MyTextChange(edt1,btn1,btn2,colse,edt4));
 	 
-	 edt2.setText(msharedp.getString(WW,""));
-	 edt3.setText(msharedp.getString(HH,""));
-	 mcb.setChecked(msharedp.getBoolean(BL,true));
+	 edt2.setText(msharedp.getString(SP_WW,""));
+	 edt3.setText(msharedp.getString(SP_HH,""));
+	 mcb.setChecked(msharedp.getBoolean(SP_BL,true));
   }
 
   @Override
@@ -55,8 +54,9 @@ public class TBtmzhActivity extends Zactivity
 		t_w=edt2.length()<1?"480":edt2.getText().toString(),
 		t_h=edt3.length()<1?"800":edt3.getText().toString();
 
-		msharedp.edit().putString(WW,edt2.getText().toString()).commit();
-		msharedp.edit().putString(HH,edt3.getText().toString()).commit();
+		msharedp.edit().putString(SP_WW,edt2.getText().toString()).commit();
+		msharedp.edit().putString(SP_HH,edt3.getText().toString()).commit();
+    msharedp.edit().putBoolean(SP_BL,mcb.isChecked()).commit();
 		
 	 int i=0;
 	 while(bn.indexOf("http")!=-1&&bn.indexOf(".jpg")!=-1)

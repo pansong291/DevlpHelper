@@ -22,11 +22,11 @@ public class MainActivity extends Zactivity
      super.onCreate(savedInstanceState);
      setContentView(R.layout.activity_main);
 	 mcb=(CheckBox)findViewById(R.id.alCheckB);
-	 mcb.setChecked(guolv=msharedp.getBoolean("loadUser",true));
+	 mcb.setChecked(guolv=msharedp.getBoolean(SP_LOAD_USER,true));
   }
   public void togxygg(View v)
   {
-   msharedp.edit().putBoolean("loadUser",guolv=mcb.isChecked()).commit();
+   msharedp.edit().putBoolean(SP_LOAD_USER,guolv=mcb.isChecked()).commit();
    intentTo(AppListActivity.class);
   }
   

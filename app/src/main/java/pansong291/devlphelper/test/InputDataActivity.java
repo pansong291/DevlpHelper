@@ -32,12 +32,12 @@ public class InputDataActivity extends Zactivity
   /***/
   try
   {
-   JSONObject jso1=new JSONObject(msharedp.getString("mainJS",""));
-   inS.setText(jso1.optString("FileSize"));
-   inU.setText(jso1.optString("DownUrl"));
-   inM.setText(jso1.optString("NewMessage"));
-   inGM.setText(jso1.optString("ProclamationMessage"));
-   inQZ.setText(jso1.optString("ForceUpdate"));
+   JSONObject jso1=new JSONObject(msharedp.getString(SP_MAIN_JS,""));
+   inS.setText(jso1.optString(T_FILE_SIZE));
+   inU.setText(jso1.optString(T_DOWN_URL));
+   inM.setText(jso1.optString(T_NEW_MSG));
+   inGM.setText(jso1.optString(T_PRC_MSG));
+   inQZ.setText(jso1.optString(T_FORCE_UP));
   }catch(JSONException e)
   {}
  }
@@ -56,12 +56,12 @@ public class InputDataActivity extends Zactivity
   try
   {
    JSONObject jso2=new JSONObject();
-   jso2.put("FileSize",inS.getText().toString());
-   jso2.put("DownUrl",inU.getText().toString());
-   jso2.put("NewMessage",inM.getText().toString());
-   jso2.put("ProclamationMessage",inGM.getText().toString());
-   jso2.put("ForceUpdate",inQZ.getText().toString());
-   msharedp.edit().putString("mainJS",jso2.toString()).commit();
+   jso2.put(T_FILE_SIZE,inS.getText().toString());
+   jso2.put(T_DOWN_URL,inU.getText().toString());
+   jso2.put(T_NEW_MSG,inM.getText().toString());
+   jso2.put(T_PRC_MSG,inGM.getText().toString());
+   jso2.put(T_FORCE_UP,inQZ.getText().toString());
+   msharedp.edit().putString(SP_MAIN_JS,jso2.toString()).commit();
   }catch(JSONException e)
   {}
  }
@@ -113,11 +113,11 @@ public class InputDataActivity extends Zactivity
   try
   {
    JSONObject jso4=new JSONObject();
-   jso4.put("VersName",ApVerName);
-   jso4.put("VersCode",Integer.parseInt(ApVerCode));
-   jso4.put("FileSize",inSize);
-   jso4.put("DownUrl",inUrl);
-   jso4.put("NewMessage",inMessage);
+   jso4.put(T_VER_NAME,ApVerName);
+   jso4.put(T_VER_CODE,Integer.parseInt(ApVerCode));
+   jso4.put(T_FILE_SIZE,inSize);
+   jso4.put(T_DOWN_URL,inUrl);
+   jso4.put(T_NEW_MSG,inMessage);
    tt1=jso4.toString().replace("\\/","/");
    tt1=tt+ApName+"：</b></font>"+ApPack+tt1+ApPack;
   }catch(JSONException e)
@@ -145,9 +145,9 @@ public class InputDataActivity extends Zactivity
   try
   {
    JSONObject jso3=new JSONObject();
-   jso3.put("ForceUpdate",Integer.parseInt(inQZup));
-   jso3.put("ShowTime",time);
-   jso3.put("ProclamationMessage",inGGMess);
+   jso3.put(T_FORCE_UP,Integer.parseInt(inQZup));
+   jso3.put(T_SHOW_TIME,time);
+   jso3.put(T_PRC_MSG,inGGMess);
    tt1=jso3.toString().replace("\\/","/");
    tt1=tt+ApName+"：</b></font>"+ApPack+tt1+ApPack;
   }catch(JSONException e)
@@ -166,7 +166,7 @@ public class InputDataActivity extends Zactivity
  public void goWeb(View v)
  {
   Intent it=new Intent(this,WebViewActivity.class);
-  it.putExtra(WebViewActivity.uul,"http://wap.blog.163.com/pansong291");
+  it.putExtra(WebViewActivity.uul,WebViewActivity.wangyi);
   startActivity(it);
   finish();
  }
