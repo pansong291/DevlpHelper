@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
-import pansong291.crash.ActivityControl;
+import pansong291.crash.ASControl;
 
 public class Zactivity extends Activity
 {
@@ -19,7 +19,7 @@ public class Zactivity extends Activity
  protected void onCreate(Bundle savedInstanceState)
  {
   super.onCreate(savedInstanceState);
-  ActivityControl.getActivityControl().addActivity(this);
+  ASControl.getASControl().addActivity(this);
   
   msharedp=getSharedPreferences(getPackageName()+"_preferences",0);
   cmb=(android.text.ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
@@ -29,7 +29,7 @@ public class Zactivity extends Activity
  protected void onDestroy()
  {
   super.onDestroy();
-  ActivityControl.getActivityControl().removeActivity(this);
+  ASControl.getASControl().removeActivity(this);
  }
  
  public void toast(String str,int i)

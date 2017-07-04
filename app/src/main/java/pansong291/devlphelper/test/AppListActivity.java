@@ -38,8 +38,8 @@ public class AppListActivity extends Zactivity
   //大概是使标题栏有进度条吧，但这样会使其直接显示出来
   requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
   setContentView(R.layout.activity_applist);
-  //使ActionBar上的Progress隐藏
-  //setProgressBarIndeterminateVisibility(false);
+  //使ActionBar上的Progress显示
+  setProgressBarIndeterminateVisibility(true);
   appList=new ArrayList<AppInfo>();
   //获取设备上的应用程序
   packages=getPackageManager().getInstalledPackages(0);

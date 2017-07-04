@@ -119,14 +119,14 @@ public class InputDataActivity extends Zactivity
    jso4.put(T_DOWN_URL,inUrl);
    jso4.put(T_NEW_MSG,inMessage);
    tt1=jso4.toString().replace("\\/","/");
-   tt1=tt+ApName+"：</b></font>"+ApPack+tt1+ApPack;
+   tt1=tt+ApName+"：<br>"+ApPack+tt1+ApPack;
   }catch(JSONException e)
   {
    tt1="异常："+e.getMessage();
   }
   outMes.setText((bb+=outMes.getText().toString().equals("")?"":"\n\n")+tt1);
  }
- String bb,tt="<br><font color=\"#ff0000\"><b>",tt1;
+ String bb,tt="<br>",tt1;
  public void gongGao(View v)
  {
   if((inGGMess=inGM.getText().toString()).equals("")
@@ -149,7 +149,7 @@ public class InputDataActivity extends Zactivity
    jso3.put(T_SHOW_TIME,time);
    jso3.put(T_PRC_MSG,inGGMess);
    tt1=jso3.toString().replace("\\/","/");
-   tt1=tt+ApName+"：</b></font>"+ApPack+tt1+ApPack;
+   tt1=tt+ApName+"：<br>"+ApPack+tt1+ApPack;
   }catch(JSONException e)
   {
    tt1="异常："+e.getMessage();
